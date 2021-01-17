@@ -1,1 +1,1 @@
-Documentation for Horizon31 Projects
+Public documentation for Horizon31 Projects
