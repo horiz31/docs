@@ -18,7 +18,8 @@
 2. Go to fullscreen (View > Fullscreen Interface (F11))
 
 #### Troubleshooting:
-If the stream does not show, it is likley related to the networking or firewall on the local machine. VLC may require a firewall exception when it first loads, but if not an exception should be entered for UDP port 5600.   
+If the stream does not show, it is likley related to the networking or firewall on the local machine. VLC may require a firewall exception when it first loads, but if not an exception should be entered for UDP port 5600. 
+
 It is not fully understood how VLC picks an interface (or interfaces) to use for mulicate group joins. Therefore we recommend that you use this setup on a PC with only one network interface. If you need to disable other interfaces (e.g. WiFi), then reboot after you disable. 
  
 It is unlikely, but if you cannot disable other network interfaces, you may be able to add a persistent route on the desired interface.  For Windows, open a command prompt as administrator:    
