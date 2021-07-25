@@ -18,22 +18,24 @@
 2. Go to fullscreen (View > Fullscreen Interface (F11))
 
 #### Troubleshooting:
-If the stream does not show, it is likley related to the networking or firewall on the local machine. VLC may require a firewall exception when it first loads, but if not an exception should be entered for UDP port 5600. 
+If the stream does not show, it is likley related to the networking or firewall on the local machine. VLC may request a firewall exception when it first loads, but if not an exception should be entered for UDP port 5600. 
 
-It is not fully understood how VLC picks an interface (or interfaces) to use for mulicate group joins. Therefore we recommend that you use this setup on a PC with only one network interface. If you need to disable other interfaces (e.g. WiFi), then reboot after you disable. 
+It is not fully understood how VLC picks an interface (or interfaces) to use for mulicate group joins. Therefore we recommend that you use this setup on a PC with only one network interface. If you need to disable other interfaces (e.g. WiFi), then reboot after you disable and try again.
  
-It is unlikely, but if you cannot disable other network interfaces, you may be able to add a persistent route on the desired interface.  For Windows, open a command prompt as administrator:    
+It is an unlikely scenario, but if you cannot disable other network interfaces, you may be able to add a persistent route on the desired interface.  For Windows, open a command prompt as administrator:    
 ```netsh interface ipv4 show interfaces```
 
-note the interface Idx for the edge and ethernet interface (this is assuming edge is already running of course). Assuming the Idx was 5 for edge and 7 for ethernet, then
+note the interface Idx for the interface connected to the Doodle network. Assuming the Idx was 7 for this interface:
 
 ```route -p ADD 224.0.0.0 MASK 255.0.0.0 0.0.0.0 metric 1 IF 7```
 
+Reboot
+
 #### Latency
-VLC has a default network cache of about 1s. This should be fine for most video playback demonstrations. It can be reduced significantly by running vlc from the command line with the network-caching paramter, e.g.:
+VLC has a default network cache of about 1s. This should be fine for most video playback demonstrations. It can be reduced significantly by running VLC from the command line with the network-caching paramter, e.g.:
 
 ```vlc --network-caching=150 horizon31_169_216.sdp```
 
-The above reduces the networking caching to 150ms. We do not recommend going any lower than that because we have encountered playback problems. If you need real-time low-latency video, we recommend using GStreamer or Horizon31's GCS which is built on gstreamer.
+The above reduces the networking caching to 150ms. We do not recommend going any lower than that because we have encountered playback problems. If you need real-time low-latency video, we recommend using GStreamer or Horizon31's GCS which is built on Gstreamer.
 
 
