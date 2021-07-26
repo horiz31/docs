@@ -9,7 +9,7 @@
 2. Switch over to the Video Effects.
 3. Under it, choose the Overlay.
 4. Check the Add logo option
-5. Brose and select the logo (gif or png with transparency)
+5. Browse and select the logo (gif or png with transparency)
 6. Choose the position center, top and opacity as desired
 7. Hit Close when you are done.
 
