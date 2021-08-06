@@ -1,7 +1,7 @@
 ## How to setup VLC to playback multicast stream from vehicle
 
 1. Download and install VLC https://www.videolan.org/vlc/
-2. Download the sdp file, for vehicle "Demo 1" (169.216)  https://github.com/horiz31/docs/blob/master/horizon31_169_216.sdp
+2. Download the sdp file, for vehicle "Demo 1" (172.20.95.219, multicasting to 224.11.95.219:5600)  https://github.com/horiz31/docs/blob/master/horizon31_demo1.sdp
 3. Double click the sdp file and the stream should open
 
 ## To add an overlay graphic
