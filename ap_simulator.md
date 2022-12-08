@@ -17,9 +17,12 @@ git checkout Plane-4.3.1
 Setup up build environment
 ```
 Tools/environment_install/install-prereqs-ubuntu.sh -y
+```
+Reload the path
+```
 . ~/.profile
 ```
-Run the simulator, which will build the code the first time
+Run the simulator, which will build the code the first time:
 ```
 cd ArduPlane
 ../Tools/autotest/sim_vehicle.py -j4 -f quadplane
@@ -30,6 +33,9 @@ param set Q_MAV_TYPE 20
 param set BRD_SERIAL_NUM 4126
 ```
 At this point, you have ArduPlane 4.1.3 running and it will by default open a port on localhost:14550. Run the GCS and it should automatically connect to the simulator. Windows may ask you for permission to open the port, be sure and ALLOW the connection.
+
+You may stop the simulator using ```Ctrl-C```  
+Be sure the simulator is not running before connecting to an actual vehicle
 
 
 
