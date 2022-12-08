@@ -37,5 +37,41 @@ At this point, you have ArduPlane 4.3.1 running and it will by default open a po
 You may stop the simulator using ```Ctrl-C```  
 #### Be sure the simulator is not running before connecting to an actual vehicle
 
+## So you to start up the simulator at a custom location?
+You will need to edit the Locations.txt file  
+If the simulator is running, stop it and exit using ```Ctrl-C```  
+install an editor
+```
+sudo apt-get install nano
+```
+Edit the file
+```
+nano ~/ardupilot/Tools/autotest/locations.txt
+```
+use the arrow keys to scroll down and add a new entry
+```
+NAME=Lat,Lon,Altitude,0
+```
+Lat and Lon are decimal degrees, altitude is meters above sea level. For example, Knoxville would be:
+```
+Knoxville=35.92310,-84.22301,900,0
+```
+Save the file and exit
+```
+Ctrl-o <enter>
+Ctrl-x
+```
+You may now start the simulator specifying the name of your new location
+```
+cd ~/ardupilot/ArduPlane
+../Tools/autotest/sim_vehicle.py -j4 -f quadplane -L <YOUR LOCATION>
+```
+For example, to start the Knoxville location would be 
+```
+../Tools/autotest/sim_vehicle.py -j4 -f quadplane -L Knoxville
+```
+
+
+
 
 
