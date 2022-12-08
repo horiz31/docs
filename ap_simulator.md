@@ -1,6 +1,6 @@
 ## How to set up an Ardupilot simulator
 
-These instructions assume that you are either running Ubuntu 18 or 20 LTS (within Windows WSL 1 is acceptable). WSL 2 may not allow the networking access you need.
+These instructions assume that you are either running Ubuntu 18 or 20 LTS (within Windows WSL 1 is acceptable) and that the device you are using is connected to the Internet. Note that WSL 2 may not allow the networking access you need.
 
 Get prereqs:
 ```
