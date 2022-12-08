@@ -38,7 +38,7 @@ You may stop the simulator using ```Ctrl-C```
 #### Be sure the simulator is not running before connecting to an actual vehicle
 
 ## So you to start up the simulator at a custom location?
-You will need to edit the Locations.txt file  
+You will need to edit the /Tools/autotest/locations.txt file  
 If the simulator is running, stop it and exit using ```Ctrl-C```  
 install an editor
 ```
