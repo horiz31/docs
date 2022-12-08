@@ -1,24 +1,24 @@
-## How to setup an Ardupilot simulator
+## How to set up an Ardupilot simulator
 
-These instructions assuming that you are either running Ubuntu 18/20 (within Windows WSL 1 is acceptable)
+These instructions assume that you are either running Ubuntu 18 or 20 LTS (within Windows WSL 1 is acceptable). WSL 2 may not allow the networking access you need.
 
-Get prereqs
+Get prereqs:
 ```
 sudo apt-get update
 sudo apt-get install git
 sudo apt-get install gitk git-gui
 ```
-Clone repo
+Clone repo:
 ```
 git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot
 git checkout Plane-4.3.1
 ```
-Setup up build environment
+Set up build environment:
 ```
 Tools/environment_install/install-prereqs-ubuntu.sh -y
 ```
-Reload the path
+Reload the path:
 ```
 . ~/.profile
 ```
@@ -35,7 +35,7 @@ param set BRD_SERIAL_NUM 4126
 At this point, you have ArduPlane 4.1.3 running and it will by default open a port on localhost:14550. Run the GCS and it should automatically connect to the simulator. Windows may ask you for permission to open the port, be sure and ALLOW the connection.
 
 You may stop the simulator using ```Ctrl-C```  
-Be sure the simulator is not running before connecting to an actual vehicle
+#### Be sure the simulator is not running before connecting to an actual vehicle
 
 
 
