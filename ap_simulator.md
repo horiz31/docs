@@ -40,7 +40,7 @@ You may stop the simulator using ```Ctrl-C```
 ## So you to start up the simulator at a custom location?
 You will need to edit the /Tools/autotest/locations.txt file  
 If the simulator is running, stop it and exit using ```Ctrl-C```  
-Install a simple text editor (if you are sufficient in vi you can skip this and proceed using vi)
+Install a simple text editor (if you are proficient in vi you can skip this and proceed using vi)
 ```
 sudo apt-get install nano
 ```
