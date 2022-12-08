@@ -27,7 +27,7 @@ Run the simulator, which will build the code the first time:
 cd ArduPlane
 ../Tools/autotest/sim_vehicle.py -j4 -f quadplane
 ```
-Once the simulator is build up and running (it will take several minutes the first time you do it), you will need to set 2 key parameters by typing the following:
+Once the simulator is built and running (it will take several minutes the first time you do it), you will need to set 2 key parameters by typing the following:
 ```
 param set Q_MAV_TYPE 20
 param set BRD_SERIAL_NUM 4097
