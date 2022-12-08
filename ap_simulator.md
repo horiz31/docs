@@ -30,7 +30,7 @@ cd ArduPlane
 Once the simulator is build up and running (it will take several minutes the first time you do it), you will need to set 2 key parameters by typing the following:
 ```
 param set Q_MAV_TYPE 20
-param set BRD_SERIAL_NUM 4126
+param set BRD_SERIAL_NUM 4097
 ```
 At this point, you have ArduPlane 4.1.3 running and it will by default open a port on localhost:14550. Run the GCS and it should automatically connect to the simulator. Windows may ask you for permission to open the port, be sure and ALLOW the connection.
 
