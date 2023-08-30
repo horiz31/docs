@@ -1,6 +1,15 @@
 ## How to set up an Ardupilot simulator
 
-These instructions assume that you are either running Ubuntu 18 or 20 LTS (within Windows WSL 1 is acceptable) and that the device you are using is connected to the Internet. Note that WSL 2 may not allow the networking access you need.
+### If you are running on windows, you will first need to install WSL1 (Windows Subsystem for Linux version 1)
+
+Click Start, type PowerShell, and then click Windows PowerShell
+```
+wsl --set-default-version 1
+wsl --install
+```
+Once installation completes, you should be able to run Ubuntu, Click Start, type Ubuntu, and then click Ubuntu on Windows. The instructions below pick up at the point you have a command prompt.
+
+### Install Ardupilot and run the simulator
 
 Get prereqs:
 ```
@@ -37,22 +46,22 @@ At this point, you have ArduPlane 4.3.1 running and it will by default open a po
 You may stop the simulator using ```Ctrl-C```  
 #### Be sure the simulator is not running before connecting to an actual vehicle
 
-## So you to start up the simulator at a custom location?
+## If you to start up the simulator at a custom location
 You will need to edit the /Tools/autotest/locations.txt file  
 If the simulator is running, stop it and exit using ```Ctrl-C```  
-Install a simple text editor (if you are proficient in vi you can skip this and proceed using vi)
+Install a simple text editor called `nano` using:
 ```
 sudo apt-get install nano
 ```
-Edit the file
+Edit the `locations.txt` file
 ```
 nano ~/ardupilot/Tools/autotest/locations.txt
 ```
-use the arrow keys to scroll down and add a new entry
+use the arrow keys to scroll down and add a new entry:
 ```
 NAME=Lat,Lon,Altitude,0
 ```
-Lat and Lon are decimal degrees, altitude is meters above sea level. For example, Knoxville would be:
+Lat and Lon are decimal degrees, altitude is meters above sea level. I'm not sure what the last 0 is for, so just leave it 0. For example, Knoxville would be:
 ```
 Knoxville=35.92310,-84.22301,900,0
 ```
